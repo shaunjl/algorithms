@@ -1,0 +1,11 @@
+Graphs
+
+https://medium.com/basecs/from-theory-to-practice-representing-graphs-cfd782c5be38
+
+The easiest way to represent a graph is just by a list of the edges but searching this list is O(E) where E is the number of edges
+
+Instead, use an adjacency matrix. An adjacency matrix is a 2d array with indicies for all the nodes and 1s where the nodes have an edge and 0s where they don't (or other values if it's weighted). This can be a problem, though, when the graph is sparse. In that case you end up taking up a lot of space for nothing.
+
+To solve the problem with adjacency matricies, make an adjacency list. This is a list where each of the indicies represents a node and holds a linked list or list representing it's immediate neighbors
+
+https://medium.com/basecs/finding-the-shortest-path-with-a-little-help-from-dijkstra-613149fbdc8e
