@@ -1,3 +1,11 @@
+"""
+The basic algorithm of insertion sort is:
+For each element:
+ - put all smaller elements to the left
+ - put all larger elements to the right
+"""
+
+
 def insertion_sort(list_to_sort):
     for index in range(1,len(list_to_sort)):
 

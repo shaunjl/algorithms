@@ -4,6 +4,10 @@ Recursive divide and conquer, average O(n log(n)) time complexity, worst case O(
 
 Use when you don't need it to be stable and average time complexity is more important than worst case
 
+the basic idea of quicksort is:
+- choose a pivot element
+- partition the list around that element (put all lower elements to the left, all the higher ones to the right, in no particular order)
+- do, again, until the 
 """
 
 def quick_sort(alist):
@@ -36,13 +40,9 @@ def partition(alist,first,last):
         if rightmark < leftmark:
             done = True
         else:
-            temp = alist[leftmark]
-            alist[leftmark] = alist[rightmark]
-            alist[rightmark] = temp
+            alist[leftmark], alist[rightmark] = alist[rightmark], alist[leftmark]
 
-    temp = alist[first]
-    alist[first] = alist[rightmark]
-    alist[rightmark] = temp
+    alist[first], alist[rightmark] = alist[rightmark], alist[first]
 
 
     return rightmark

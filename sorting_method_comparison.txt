@@ -1,0 +1,20 @@
+https://medium.com/@icodewithben/bubble-sort-insertion-sort-and-merge-sort-and-big-o-notation-c98d732cbd75#:~:text=Big%20O%20notations%3A&text=Insertion%20Sort%3A%20Also%20has%20a,nested%20loops%20for%20inserting%20elements.
+
+
+
+Bubble Sort: Has a best time complexity of O(n) when the array is already sorted, but typically it is O(n²) because each element is compared to every other element.
+best use cases:
+- don't use: insertion sort is a little faster so in practice bubble sort is never really used
+
+Insertion Sort: Also has a best time complexity of O(n) for an already sorted array, but has an average and worst-case time complexity of O(n²) due to the nested loops for inserting elements.
+- array is probably already sorted or nearly so - a little faster than bubble sort
+- extra space can't be used
+
+Merge Sort: Consistently has a time complexity of O(n log n) because it divides the array in half each time (which contributes the log n part) and then merges the arrays (which contributes the n part). The space complexity is O(n) due to the temporary arrays used for merging. Stable
+
+
+QuickSort: Has a best and average time complexity of O(n log n), due to the divide-and-conquer approach that ideally splits the array in half each time. The worst-case time complexity is O(n²), which can occur when the smallest or largest element is always chosen as a pivot. The space complexity is O(log n) due to the recursive function calls on the stack. However, this can be reduced to O(1) with an in-place partitioning and tail call optimizations. Not stable
+
+
+python uses powersort (see https://www.i-programmer.info/news/216-python/15954-python-now-uses-powersort.html)
+Better than any of the algorithms above in Time complexity but not in place so space complexity is worst case O(n)

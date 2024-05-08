@@ -4,6 +4,11 @@ Recursive divide and conquer, guaranteed O(n log(n)) time complexity, stable sor
 
 Only stable guaranteed O(n log(n)) sort. Uses more space than quicksort, though
 
+the basic idea of merge sort is:
+ - split up a list until it's a bunch of lists of size 1
+ - each list of size 1 is by definition ordered
+ - merge the lists back together by taking two at a time and iterating through both, creating one ordered list out of the two ordered lists
+
 """
 
 def merge_sort(alist):
@@ -20,9 +25,9 @@ def merge_sort(alist):
 
         # merge the two sides by picking the smaller of the two values 
         # across each list from left to right
-        i=0
-        j=0
-        k=0
+        i=0 # left list index
+        j=0 # right list index
+        k=0 # alist index
         while i < len(lefthalf) and j < len(righthalf):
             if lefthalf[i] < righthalf[j]:
                 alist[k]=lefthalf[i]
