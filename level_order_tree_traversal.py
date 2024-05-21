@@ -14,14 +14,22 @@ def print_level_order(root):
     queue = deque()
     queue.append(root)
 
-    while queue:
-        print(queue[0].data, end=" ")
-        node = queue.popleft()
+    curr_level = 0
 
-        if node.left:
-            queue.append(node.left)
-        if node.right:
-            queue.append(node.right)
+    while queue:
+        count_at_level = len(queue)
+
+        print("level", curr_level)
+        for _ in reversed(range(count_at_level)):
+            print(queue[0].data, end=" ")
+            node = queue.popleft()
+
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+        print(" ")
+        curr_level += 1
 
 #Driver Program to test above function 
 root = Node(1) 
